@@ -1,0 +1,71 @@
+﻿<Window
+    x:Name="TheWindow"
+    x:Class="WpfFocus.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WpfFocus"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="525"
+    Height="350"
+    mc:Ignorable="d">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Border
+            x:Name="Grid0Border"
+            Grid.Column="0"
+            GotFocus="Grid0Border_OnGotFocus"
+            LostFocus="Grid0Border_OnLostFocus">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0">
+                    <Border>
+                        <TextBlock
+                            x:Name="Row0TextBlock"
+                            Focusable="True"
+                            MouseDown="Row0TextBlock_OnMouseDown"
+                            Text="Row0" />
+                    </Border>
+                </StackPanel>
+                <StackPanel Grid.Row="1">
+                    <Border>
+                        <TextBlock
+                            x:Name="Row1TextBlock"
+                            Focusable="True"
+                            MouseDown="Row1TextBlock_OnMouseDown"
+                            Text="Row1" />
+                    </Border>
+                </StackPanel>
+                <StackPanel Grid.Row="2">
+                    <Border>
+                        <TextBlock
+                            x:Name="Row2TextBlock"
+                            Focusable="True"
+                            MouseDown="Row2TextBlock_OnMouseDown"
+                            Text="Row2" />
+                    </Border>
+                </StackPanel>
+                <StackPanel Grid.Row="3">
+                    <Border>
+                        <TextBlock
+                            x:Name="Row3TextBlock"
+                            Focusable="True"
+                            MouseDown="Row3TextBlock_OnMouseDown"
+                            Text="Row3" />
+                    </Border>
+                </StackPanel>
+            </Grid>
+        </Border>
+        <TextBox x:Name="TextBox" Grid.Column="1" />
+    </Grid>
+</Window>
